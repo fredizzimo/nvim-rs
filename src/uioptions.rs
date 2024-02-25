@@ -22,6 +22,7 @@ pub enum UiOption {
   StdinTty(bool),
   StdoutTty(bool),
   ExtWildmenu(bool),
+  ExtElementType(bool),
 }
 
 impl UiOption {
@@ -49,6 +50,7 @@ impl UiOption {
       Self::StdinTty(val) => ("stdin_tty", (*val).into()),
       Self::StdoutTty(val) => ("stdout_tty", (*val).into()),
       Self::ExtWildmenu(val) => ("ext_wildmenu", (*val).into()),
+      Self::ExtElementType(val) => ("ext_elementtype", (*val).into()),
     }
   }
 }
@@ -90,6 +92,7 @@ ui_opt_setters! (
   StdinTty as set_stdin_tty(bool);
   StdoutTty as set_stdout_tty(bool);
   ExtWildmenu as set_wildmenu_external(bool);
+  ExtElementType as set_elementtype_external(bool);
 );
 
 impl UiAttachOptions {
