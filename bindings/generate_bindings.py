@@ -220,6 +220,11 @@ def print_api(api):
             print('Version')
             print(api[key])
             print('')
+        elif key == "element_tags":
+            print('Element Tags')
+            for t in api[key]:
+                print('\t%s' % t)
+            print('')
         else:
             print('Unknown API info attribute: %s' % key)
 
@@ -256,6 +261,7 @@ if __name__ == '__main__':
                 functions = [Function(f, all_ext_prefixes) for f in api['functions']]
                 env['functions'] = [f for f in functions if f.valid]
                 env['exttypes'] = exttypes
+                env['element_tags'] = api['element_tags']
                 generate_file(name, outpath, **env)
 
     else:

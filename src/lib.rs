@@ -37,6 +37,7 @@ pub mod exttypes;
 pub mod neovim_api;
 pub mod neovim_api_manual;
 pub mod uioptions;
+pub mod element_tags;
 
 pub mod create;
 

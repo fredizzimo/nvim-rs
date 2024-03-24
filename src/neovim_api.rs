@@ -1,6 +1,6 @@
 //! The auto generated API for [`neovim`](crate::neovim::Neovim)
 //!
-//! Auto generated 2024-02-03 13:46:25.630774
+//! Auto generated 2024-02-25 18:50:36.064607
 use futures::io::AsyncWrite;
 
 use crate::{
